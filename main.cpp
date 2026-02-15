@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <random>
 using namespace std;
 
 static const int N = 100000;
@@ -34,6 +36,27 @@ int binary_Search(int arr[], int n, int search, int& comparisons){
     return -1;
 }
 
+int rand_Search(const vector<int>& vec, int key, double& comparisons){
+    comparisons = 0;
+    int n = vec.size();
+    vector<bool> visited(n, false);
+    for(int i = 0; i < visited.size()-1; i++) visited[i] = false;
+
+    mt19937 gen;
+    uniform_int_distribution<int> rand(0, n - 1);
+
+    while (n > 0) {
+        int i = rand(gen);
+
+        if(!visited[i]){
+            visited[i] = true;
+            n--;
+            comparisons++;
+            if(vec[i] == key) return i;
+        }
+    }
+    return -1;
+}
 int main() {
     int testArr[N];
 
@@ -55,6 +78,23 @@ int main() {
 
     cout << "The test value was found at index = " << binIndex << ", and took " << binaryComparisons << 
     " comparisons using the binary search algorithm.\n" ;
+
+//task 5 
+
+    vector<int> randVec(N);
+    for(int i = 0; i < N; i++) randVec[i] = i;
+
+    int key;
+    cout << "Enter key value to search for (0 - 99999): ";
+    cin >> key;
+
+    double randomComparisons = 0;
+    int randIndex = rand_Search(randVec, key, randomComparisons);
+
+    if (randIndex != -1) cout << "Index found at " << randIndex << endl;
+    else cout << "Unsuccessful." << endl;
+
+    cout << "Total comparisons using the random search algorithm " << randomComparisons << endl;
 
     return 0;
 }
