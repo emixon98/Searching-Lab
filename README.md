@@ -46,3 +46,25 @@ int binary_Search(int arr[], int n, int search, int& comparisons){
     return -1;
 }
 ```
+
+## PseudoCode (Part 1 Task 5)
+First time writing pseudocode, please let me know if anything is off.
+:= is assignment
+... is through (ie) index[0] through index[n]
+
+function RandSearch(array, key) is 
+    n := size(array)
+    visited[0 ... n-1] := false
+    totalComparisons := 0
+
+    while n > 0 do
+        i := random integer (0 ... n-1)
+        if visited[i] is false then
+            visited[i] := true
+            n := n - 1
+            totalComparisons := totalComparison + 1
+
+            if array[i] is equal to key then:
+                return i
+
+    return unsucessful
