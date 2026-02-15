@@ -4,6 +4,7 @@ using namespace std;
 static const int N = 100000;
 
 //linear is straight forward, using & so I can return comparisons in main
+//O(n) because it has to compare each element to the search, meaning it is at worst O(n), with n being the length of the array
 int linear_Search(int arr[], int n, int search, double& comparisons){
     comparisons = 0;
     for (int i = 0; i < n; i++){
@@ -13,6 +14,8 @@ int linear_Search(int arr[], int n, int search, double& comparisons){
     return -1;
 }
 
+//int logbase2(n), worst case has to splice the array into halves as many times as possible to find last remaining element
+//can show with calculator
 int binary_Search(int arr[], int n, int search, int& comparisons){
     comparisons = 0;
     int low = 0, high = n-1; //setting initial indexes for search
