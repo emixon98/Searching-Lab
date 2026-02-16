@@ -38,7 +38,8 @@ int binary_Search(int arr[], int n, int search, int& comparisons){
         comparisons++;
         if (arr[mid] == search) return mid;
 
-        comparisons++; //this is technically a comparison, so incrementing here too
+        //comparisons++; 
+        
         if(search < arr[mid])
             high = mid -1;
         else 
