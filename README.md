@@ -4,7 +4,7 @@ Week 2 CISC 187
 
 ## Steps it would take to perform a linear search for the number 8 in the ordered array, [2, 4, 6, 8, 10, 12, 13]? 
 
-A linear search compares one element in the list at a time to the inputted search. In this case it would check arr[0], arr[1], arr[2], and finally arr[3], where 8 resides. This results in 4 total steps, with the 4th being the actual result. O(4).
+A linear search compares one element in the list at a time to the inputted search. In this case it would check arr[0], arr[1], arr[2], and finally arr[3], where 8 resides. This results in 4 total steps, with the 4th being the actual result.
 
 ## How many steps would binary search take for the previous example? 
 
