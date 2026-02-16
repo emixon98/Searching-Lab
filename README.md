@@ -48,7 +48,9 @@ int binary_Search(int arr[], int n, int search, int& comparisons){
 }
 ```
 
-## PseudoCode (Part 1 Task 5)
+## Task 5 Randomized Search Algorithm
+
+### PseudoCode (Part 1 Task 5)
 (First time writing pseudocode, please let me know if anything is off.)
 
 := is assignment
