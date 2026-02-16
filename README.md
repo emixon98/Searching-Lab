@@ -73,7 +73,7 @@ function rand_Search(array, key) is
 
     return unsuccessful
 ```
-## Code (Part 2)
+### Code (Part 2 Task 5)
 ```C++
 int rand_Search(const vector<int>& vec, int key, double& comparisons){
     comparisons = 0;
@@ -98,19 +98,19 @@ int rand_Search(const vector<int>& vec, int key, double& comparisons){
 }
 ```
 
-## Logic Discussion (part 3 task 5)
+### Logic Discussion (part 3 task 5)
 
 *Time Complexity Linear Search (Does not require ordering on datasets):
-    *Best Case: O(1)
-    *Worst Case: O(N)
-    *Does not require an ordered array. Good for smaller datasets, minimal overhead needed.
+   &nbsp Best Case: O(1)
+   &nbsp Worst Case: O(N)
+   &nbsp Does not require an ordered array. Good for smaller datasets, minimal overhead needed.
 
 *Time Complexity Binary Search (Requires Ordering/Sorting):
-    *Best Case: O(1)
-    *Worst Case: O(log N)  or (log_10 N) / (log_10 2)
-    *Best for larger datasets.
+   &nbsp Best Case: O(1)
+   &nbsp Worst Case: O(log N)  or (log_10 N) / (log_10 2)
+   &nbsp Best for larger datasets.
 
 *Time Complexity Random Search (Does not require ordering on datasets):
-    *Best Case: O(1)
-    *Worst Case: O(N)
-    *Good for cases where you need randomization, such as a lottery draw, a random dataset. Still O(N). Not as reliable, but if elements are weighted evenly it can find uses. Very niche.
+   &nbsp Best Case: O(1)
+   &nbsp Worst Case: O(N)
+   &nbsp Good for cases where you need randomization, such as a lottery draw, a random dataset. Still O(N). Not as reliable, but if elements are weighted evenly it can find uses. Very niche.
