@@ -50,15 +50,17 @@ int binary_Search(int arr[], int n, int search, int& comparisons){
 
 ## PseudoCode (Part 1 Task 5)
 (First time writing pseudocode, please let me know if anything is off.)
+
 := is assignment
+
 ... is through (ie) index[0] through index[n]
+
 ```
 function rand_Search(array, key) is 
     n := size(array)
     visited[0 ... n-1] := false
     totalComparisons := 0
-```
-```C++
+
     while n > 0 do
         i := random integer (0 ... n-1)
         if visited[i] is false then
