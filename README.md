@@ -17,6 +17,7 @@ Using the given formula in our book and plugging in 100,000 as our N I got 16.6,
 ## Task 4: Write a C++ program that implements both linear search and binary search algorithms using an array of 100,000 elements.
 
 ### Linear search Algorithm
+O(N) Because we consider each element in comparison to our desired value, which means the worst-case is ending at the last element, or N, the entire length of the array.
 ```C++
 int linear_Search(int arr[], int n, int search, double& comparisons){
     comparisons = 0;
@@ -28,6 +29,7 @@ int linear_Search(int arr[], int n, int search, double& comparisons){
 }
 ```
 ### Binary search Algorithm
+O(logN). Worst-case we have to split our array in half as many time as we can, leading to an answer of logbase2(N). 
 ```C++
 int binary_Search(int arr[], int n, int search, int& comparisons){
     comparisons = 0;
