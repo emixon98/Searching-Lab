@@ -84,7 +84,7 @@ int rand_Search(const vector<int>& vec, int key, double& comparisons){
     int remaining = n;
     comparisons = 0;    
 
-    mt19937 gen;
+    mt19937 gen(random_device{}());
     uniform_int_distribution<int> rand(0, n - 1);
 
     while (remaining > 0) {
