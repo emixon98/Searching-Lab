@@ -120,3 +120,6 @@ int rand_Search(const vector<int>& vec, int key, double& comparisons){
    * Best Case: O(1)
    * Worst Case: O(N)
    * Good for cases where you need randomization, such as a lottery draw, a random dataset. Still O(N). Not as reliable, but if elements are weighted evenly it can find uses. Very niche.
+ 
+Youtube link to explanation of Lab: https://www.youtube.com/watch?v=tqcpTwPSAwE
+
