@@ -67,4 +67,8 @@ function RandSearch(array, key) is
             if array[i] is equal to key then:
                 return i
 
-    return unsucessful
+    return unsuccessful
+## Code (Part 2)
+
+
+## Logic Discussion
