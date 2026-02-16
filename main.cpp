@@ -39,20 +39,22 @@ int binary_Search(int arr[], int n, int search, int& comparisons){
 }
 
 int rand_Search(const vector<int>& vec, int key, double& comparisons){
-    comparisons = 0;
+
     int n = vec.size();
+    int remaining = n;
+    comparisons = 0;    
+    
     vector<bool> visited(n, false);
-    for(int i = 0; i < visited.size()-1; i++) visited[i] = false;
 
     mt19937 gen;
     uniform_int_distribution<int> rand(0, n - 1);
 
-    while (n > 0) {
+    while (remaining > 0) {
         int i = rand(gen);
 
         if(!visited[i]){
             visited[i] = true;
-            n--;
+            remaining--;
             comparisons++;
             if(vec[i] == key) return i;
         }
