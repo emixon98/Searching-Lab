@@ -17,7 +17,8 @@ Using the given formula in our book and plugging in 100,000 as our N I got 16.6,
 ## Write a C++ program that implements both linear search and binary search algorithms using an array of 100,000 elements.
 
 ### Linear search Algorithm
-```int linear_Search(int arr[], int n, int search, double& comparisons){
+```C++
+int linear_Search(int arr[], int n, int search, double& comparisons){
     comparisons = 0;
     for (int i = 0; i < n; i++){
         comparisons++;
@@ -27,7 +28,7 @@ Using the given formula in our book and plugging in 100,000 as our N I got 16.6,
 }
 ```
 ### Binary search Algorithm
-```
+```C++
 int binary_Search(int arr[], int n, int search, int& comparisons){
     comparisons = 0;
     int low = 0, high = n-1; //setting initial indexes for search
@@ -51,12 +52,13 @@ int binary_Search(int arr[], int n, int search, int& comparisons){
 (First time writing pseudocode, please let me know if anything is off.)
 := is assignment
 ... is through (ie) index[0] through index[n]
-
+```
 function rand_Search(array, key) is 
     n := size(array)
     visited[0 ... n-1] := false
     totalComparisons := 0
-
+```
+```C++
     while n > 0 do
         i := random integer (0 ... n-1)
         if visited[i] is false then
@@ -68,8 +70,9 @@ function rand_Search(array, key) is
                 return i
 
     return unsuccessful
-## Code (Part 2)
 ```
+## Code (Part 2)
+```C++
 int rand_Search(const vector<int>& vec, int key, double& comparisons){
     comparisons = 0;
     int n = vec.size();
