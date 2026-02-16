@@ -8,7 +8,7 @@ A linear search compares one element in the list at a time to the inputted searc
 
 ## How many steps would binary search take for the previous example? 
 
-A binary search would start at the middle element and compare it to the desired search. In this case our middle element is 8, so we would arrive at it right away. This would take one step total. (I believe, unit test later)
+A binary search would start at the middle element and compare it to the desired search. In this case our middle element is 8, so we would arrive at it right away. This would take one step total.
 
 ## What is the maximum number of steps it would take to perform a binary search on an array of size 100,000?
 
@@ -48,11 +48,11 @@ int binary_Search(int arr[], int n, int search, int& comparisons){
 ```
 
 ## PseudoCode (Part 1 Task 5)
-First time writing pseudocode, please let me know if anything is off.
+(First time writing pseudocode, please let me know if anything is off.)
 := is assignment
 ... is through (ie) index[0] through index[n]
 
-function RandSearch(array, key) is 
+function rand_Search(array, key) is 
     n := size(array)
     visited[0 ... n-1] := false
     totalComparisons := 0
