@@ -57,6 +57,8 @@ int rand_Search(const vector<int>& vec, int key, double& comparisons){
     }
     return -1;
 }
+
+
 int main() {
     int testArr[N];
 

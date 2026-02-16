@@ -69,6 +69,43 @@ function RandSearch(array, key) is
 
     return unsuccessful
 ## Code (Part 2)
+```
+int rand_Search(const vector<int>& vec, int key, double& comparisons){
+    comparisons = 0;
+    int n = vec.size();
+    vector<bool> visited(n, false);
+    for(int i = 0; i < visited.size()-1; i++) visited[i] = false;
 
+    mt19937 gen;
+    uniform_int_distribution<int> rand(0, n - 1);
 
-## Logic Discussion
+    while (n > 0) {
+        int i = rand(gen);
+
+        if(!visited[i]){
+            visited[i] = true;
+            n--;
+            comparisons++;
+            if(vec[i] == key) return i;
+        }
+    }
+    return -1;
+}
+```
+
+## Logic Discussion (part 3 task 5)
+
+Time Complexity Linear Search (Does not require ordering on datasets):
+    Best Case: O(1)
+    Worst Case: O(N)
+    Does not require an ordered array. Good for smaller datasets, minimal overhead needed.
+
+Time Complexity Binary Search (Requires Ordering/Sorting):
+    Best Case: O(1)
+    Worst Case: O(log N)  or (log_10 N) / (log_10 2)
+    Best for larger datasets.
+
+Time Complexity Random Search (Does not require ordering on datasets):
+    Best Case: O(1)
+    Worst Case: O(N)
+    Good for cases where you need randomization, such as a lottery draw, a random dataset. Still O(N). Not as reliable, but if elements are weighted evenly it can find uses. Very niche.
